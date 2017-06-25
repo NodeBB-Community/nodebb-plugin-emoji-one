@@ -7,7 +7,7 @@
 
 The one emoji-set for NodeBB.
 
-![preview](https://raw.githubusercontent.com/NodeBB-Community/nodebb-plugin-emoji-one/master/public/static/preview.png)
+![preview](https://d1j8pt39hxlh3d.cloudfront.net/sections/thumbnails/thumb-3.0c_1.png)
 
 ## Installation
 
@@ -18,7 +18,3 @@ Install and activate `nodebb-plugin-emoji-extended` and `nodebb-plugin-emoji-one
 The manual installation via [NPM](https://www.npmjs.com/) may result in version-conflicts with NodeBB.
 
     npm install nodebb-plugin-emoji-extended nodebb-plugin-emoji-one
-
-## Development
-
-This module gets developed using the [NodeBB Grunt](https://github.com/NodeBB-Community/nodebb-grunt) Framework.
