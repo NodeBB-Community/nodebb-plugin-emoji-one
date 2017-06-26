@@ -26,6 +26,7 @@ function defineEmoji(callback) {
         ascii,
         character,
         categories,
+        keywords: e.keywords,
       }];
     });
 
