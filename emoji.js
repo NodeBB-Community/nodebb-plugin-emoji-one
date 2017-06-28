@@ -17,7 +17,10 @@ function defineEmoji(callback) {
         return str.slice(1, -1);
       });
       const ascii = e.ascii.map(x => x.replace(/</g, '&lt;').replace(/>/g, '&gt;'));
-      const character = String.fromCodePoint(parseInt(e.code_points.base, 16));
+      const character = e.code_points.base
+        .split('-')
+        .map(code => String.fromCodePoint(parseInt(code, 16)))
+        .join('');
       const categories = [e.category];
 
       return [name, {
