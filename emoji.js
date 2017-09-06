@@ -1,5 +1,5 @@
-var path = require('path');
-var download = require('download');
+const path = require('path');
+const download = require('download');
 const fromPairs = require('lodash.frompairs');
 const emoji = require('emojione/emoji');
 
@@ -24,11 +24,11 @@ function defineEmoji(callback) {
       const categories = [e.category];
 
       return [name, {
-        image: key + '.png',
         aliases,
         ascii,
         character,
         categories,
+        image: key + '.png',
         keywords: e.keywords,
       }];
     });
