@@ -1,9 +1,14 @@
 const path = require('path');
 const download = require('download');
 const fromPairs = require('lodash.frompairs');
+const semver = require('semver');
+const emojionePackage = require('emojione/package.json');
 const emoji = require('emojione/emoji');
 
-const packageURL = 'https://d1j8pt39hxlh3d.cloudfront.net/emoji/emojione/3.0/EmojiOne_3.0_32x32_png.zip';
+const ver = semver.clean(emojionePackage.version, true);
+const version = `${semver.major(ver)}.${semver.minor(ver)}`;
+
+const packageURL = `https://d1j8pt39hxlh3d.cloudfront.net/emoji/emojione/${version}/EmojiOne_${version}_32x32_png.zip`;
 
 function defineEmoji(callback) {
   download(packageURL, path.join(__dirname, 'emoji'), {
