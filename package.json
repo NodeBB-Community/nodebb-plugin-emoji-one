@@ -1,7 +1,7 @@
 {
   "name": "nodebb-plugin-emoji-one",
   "version": "2.0.0",
-  "description": "The emoji-one set for NodeBB (requires nodebb-plugin-emoji-extended)",
+  "description": "The emoji-one set for NodeBB (requires nodebb-plugin-emoji)",
   "main": "emoji.js",
   "author": "Ole Reglitzki <frissdiegurke@protonmail.com> (https://github.com/frissdiegurke)",
   "contributors": [
@@ -15,7 +15,7 @@
   },
   "nbbpm": {
     "name": "Emoji One",
-    "compatibility": "^1.5.0"
+    "compatibility": "^1.6.0"
   },
   "keywords": [
     "nodebb",
@@ -26,7 +26,7 @@
     "one"
   ],
   "peerDependencies": {
-    "nodebb-plugin-emoji-extended": "^2.0.0"
+    "nodebb-plugin-emoji": "^2.0.0"
   },
   "dependencies": {
     "download": "^6.2.3",
