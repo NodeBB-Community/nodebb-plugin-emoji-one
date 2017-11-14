@@ -10,7 +10,7 @@ const version = `${semver.major(ver)}.${semver.minor(ver)}`;
 
 const packageURL = `https://d1j8pt39hxlh3d.cloudfront.net/emoji/emojione/${version}/EmojiOne_${version}_32x32_png.zip`;
 
-function defineEmoji(callback) {
+function defineEmoji(data, callback) {
   download(packageURL, path.join(__dirname, 'emoji'), {
     extract: true,
   }).then(() => {
@@ -40,7 +40,8 @@ function defineEmoji(callback) {
 
     const dictionary = fromPairs(pairs);
 
-    callback(null, {
+    data.packs.push({
+      path: __dirname,
       name: 'EmojiOne',
       id: 'emoji-one',
 	    attribution: 'Emoji icons provided free by <a href="https://www.emojione.com" target="_blank" rel="noopener">EmojiOne</a>',
@@ -51,7 +52,9 @@ function defineEmoji(callback) {
       },
       dictionary,
     });
+
+    callback(null, data);
   }, callback);
 }
 
-module.exports = defineEmoji;
+exports.defineEmoji = defineEmoji;
