@@ -15,7 +15,10 @@
   },
   "nbbpm": {
     "name": "Emoji One",
-    "compatibility": "^1.6.0"
+    "compatibility": "^1.7.0"
+  },
+  "peerDependencies": {
+    "nodebb-plugin-emoji": "^2.0.0"
   },
   "keywords": [
     "nodebb",
@@ -25,9 +28,6 @@
     "emoji",
     "one"
   ],
-  "peerDependencies": {
-    "nodebb-plugin-emoji": "^2.0.0"
-  },
   "dependencies": {
     "download": "^6.2.3",
     "emojione": "^3.1.2",
